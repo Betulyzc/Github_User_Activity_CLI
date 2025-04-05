@@ -1,12 +1,17 @@
 # GitHub User Activity CLI
 This command-line interface (CLI) application fetches and displays the recent public activity of a given GitHub user using the GitHub API. It is a simple and lightweight tool written in Python, with no external dependencies.
 
+- Written in Python using only built-in modules and [colorama](https://pypi.org/project/colorama/) for colored terminal output.  
+- Automatically installs `colorama` on first run if not already installed.
+
 ---
 
 ##  Features
 - Fetches the most recent public activity of any GitHub user.
 - No third-party libraries required — uses Python’s built-in `urllib` and `json` modules.
 - Allows customization of how many recent events to display.
+- Adds color to the terminal output with `colorama`
+- Auto-installs `colorama` if missing (no setup required)
 - Provides detailed output for key activity types such as `Push`, `Pull Request`, `Issue Comment`,`Fork` and `Create`. Other events are shown with their type and associated repository.
 - Handles errors gracefully, including invalid usernames, API rate limits, connection problems, and users with no recent activity.
 
@@ -33,8 +38,9 @@ Argument	            Description
 - PullRequestEvent: Indicates when a pull request is opened
 - CreateEvent: Describes newly created repositories or branches
 - IssueCommentEvent: Displays issue comment details
+- ForkEvent: Indicates a repository was forked
 - Others: Displayed in a general format
-
+ 
 
 ## 📸 Example Output
 
